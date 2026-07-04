@@ -57,7 +57,6 @@ export function LanguagesSection() {
           </Reveal>
       
             </div>
-          </Reveal>
         </div>
       </div>
     </section>
