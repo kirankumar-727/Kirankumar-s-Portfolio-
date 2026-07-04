@@ -58,7 +58,7 @@ export function LanguagesSection() {
       
             </div>
         </div>
-      </div>
+      
     </section>
   );
 }
