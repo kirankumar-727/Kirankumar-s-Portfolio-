@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowRight, Languages as LangIcon } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { languages } from "@/data/site";
@@ -56,19 +55,7 @@ export function LanguagesSection() {
               <ArrowRight className="h-4 w-4" />
             </button>
           </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="relative mx-auto max-w-md">
-              <div className="absolute -inset-4 -z-10 rounded-[32px] bg-gradient-to-br from-primary/15 to-transparent blur-2xl" />
-              <div className="overflow-hidden rounded-3xl border border-line bg-white p-6 shadow-card">
-                <Image
-                  src="/assets/languages-illustration.png"
-                  alt="Bilingual content writing in English and Kannada"
-                  width={800}
-                  height={800}
-                  className="h-full w-full rounded-2xl object-cover"
-                />
-              </div>
+      
             </div>
           </Reveal>
         </div>
