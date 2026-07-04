@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --container: 1200px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  @apply bg-white text-ink font-sans;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .label-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary;
+  }
+
+  .heading-xl {
+    @apply text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-lg {
+    @apply text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .heading-md {
+    @apply text-2xl font-bold leading-tight tracking-tight sm:text-3xl;
+  }
+
+  .body-lg {
+    @apply text-lg leading-relaxed text-muted;
+  }
+
+  .card-base {
+    @apply rounded-3xl border border-line bg-white shadow-soft transition-all duration-300;
+  }
+
+  .icon-chip {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white shadow-[0_8px_24px_rgba(14,165,198,0.35)] hover:-translate-y-0.5 hover:bg-primary-600 hover:shadow-[0_12px_32px_rgba(14,165,198,0.45)] active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-white text-ink hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary hover:shadow-soft active:translate-y-0;
+  }
+
+  .btn-ghost-dark {
+    @apply btn border border-white/15 bg-white/5 text-white hover:bg-white/10;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-muted transition-all duration-200 hover:border-primary/40 hover:text-ink;
+  }
+
+  .chip-active {
+    @apply border-primary bg-primary text-white shadow-[0_6px_16px_rgba(14,165,198,0.35)] hover:text-white;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(17, 24, 39, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 24, 39, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .grid-pattern-dark {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
