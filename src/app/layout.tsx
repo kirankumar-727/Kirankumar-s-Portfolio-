@@ -23,7 +23,7 @@ const siteUrl = "https://kirankumar-s-portfolio.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 verification: {
-  google: "ZERz8paffMy9daTIP_Ku7RGFadPc56pij36rh60UZ1I",
+  google: "ZERz8paffMy9daTIP_Ku7RGFadPc56pij36rh60UZlI",
 },
   title: {
     default: "Kirankumar K. — Content Strategist & Scriptwriter",
