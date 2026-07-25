@@ -18,10 +18,13 @@ const kannada = Noto_Sans_Kannada({
   weight: ["400", "500", "600", "700"],
 });
 
-const siteUrl = "https://kirankumar.example.com";
+const siteUrl = "https://kirankumar-s-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+verification: {
+  google: "ZERz8paffMy9daTIP_Ku7RGFadPc56pij36rh60UZ1I",
+},
   title: {
     default: "Kirankumar K. — Content Strategist & Scriptwriter",
     template: "%s | Kirankumar K.",
