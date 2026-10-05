@@ -7,7 +7,7 @@ import { framework } from "@/data/site";
 
 export function Framework() {
   return (
-    <section id="framework" className="section relative">
+    <section id="framework" className="section relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-1/3 h-64 w-[640px] -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
       </div>
