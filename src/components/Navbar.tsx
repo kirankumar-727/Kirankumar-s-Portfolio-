@@ -126,7 +126,7 @@ export function Navbar() {
                       )}
                     >
                       {item.label}
-                    </button>
+                    </a>
                   </li>
                 ))}
               <li className="mt-2">
