@@ -14,6 +14,29 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/*
+ * Keep the application shell tied to the actual viewport.
+ * Some embedded mobile browsers can leave the document's containing block
+ * narrower than the visual viewport. Without an explicit viewport width,
+ * full-bleed sections can stop early and leave an unused strip at the side.
+ */
+body {
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 0;
+}
+
+body > header,
+body > main,
+body > footer {
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 0;
 }
 
 body {
