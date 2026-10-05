@@ -85,7 +85,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section relative">
+    <section id="contact" className="section relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-72 w-[640px] -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
       </div>
