@@ -4,9 +4,15 @@ export function cn(...classes: (string | false | null | undefined)[]): string {
 
 export function scrollToId(id: string) {
   const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  if (!el) return;
+
+  const headerOffset = 88;
+  const top = Math.max(
+    0,
+    window.scrollY + el.getBoundingClientRect().top - headerOffset
+  );
+
+  window.scrollTo({ top, behavior: "smooth" });
 }
 
 /**
