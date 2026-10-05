@@ -30,12 +30,8 @@ export function Navbar() {
       )}
     >
       <nav className="container-x flex h-[68px] items-center justify-between">
-        <a
-          href="#home"
-          onClick={(event) => {
-            event.preventDefault();
-            handleNav("home");
-          }}
+        <button
+          onClick={() => handleNav("home")}
           className="flex items-center gap-2.5"
           aria-label="Kirankumar K. — home"
         >
@@ -45,7 +41,7 @@ export function Navbar() {
           <span className="text-[15px] font-bold tracking-tight text-ink">
             Kirankumar K.
           </span>
-        </a>
+        </button>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 lg:flex">
@@ -53,12 +49,8 @@ export function Navbar() {
             .filter((n) => n.id !== "home" && n.id !== "contact")
             .map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    handleNav(item.id);
-                  }}
+                <button
+                  onClick={() => handleNav(item.id)}
                   className={cn(
                     "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
                     active === item.id
@@ -67,23 +59,19 @@ export function Navbar() {
                   )}
                 >
                   {item.label}
-                </a>
+                </button>
               </li>
             ))}
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href="#contact"
-            onClick={(event) => {
-              event.preventDefault();
-              handleNav("contact");
-            }}
+          <button
+            onClick={() => handleNav("contact")}
             className="btn-primary"
           >
             Let&apos;s Talk
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -112,12 +100,8 @@ export function Navbar() {
                 .filter((n) => n.id !== "home")
                 .map((item) => (
                   <li key={item.id}>
-                    <a
-                      href={`#${item.id}`}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleNav(item.id);
-                      }}
+                    <button
+                      onClick={() => handleNav(item.id)}
                       className={cn(
                         "w-full rounded-xl px-4 py-3 text-left text-[15px] font-medium transition-colors",
                         active === item.id
@@ -126,21 +110,17 @@ export function Navbar() {
                       )}
                     >
                       {item.label}
-                    </a>
+                    </button>
                   </li>
                 ))}
               <li className="mt-2">
-                <a
-                  href="#contact"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    handleNav("contact");
-                  }}
+                <button
+                  onClick={() => handleNav("contact")}
                   className="btn-primary w-full"
                 >
                   Let&apos;s Talk
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </button>
               </li>
             </ul>
           </motion.div>
