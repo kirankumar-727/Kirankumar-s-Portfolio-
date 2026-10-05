@@ -56,14 +56,17 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.18 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }} className="btn-primary">
+            <button onClick={() => scrollToId("contact")} className="btn-primary">
               Connect with me
               <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href="#portfolio" onClick={(event) => { event.preventDefault(); scrollToId("portfolio"); }} className="btn-secondary">
+            </button>
+            <button
+              onClick={() => scrollToId("portfolio")}
+              className="btn-secondary"
+            >
               <Play className="h-4 w-4" />
               View Sample Scripts
-            </a>
+            </button>
           </motion.div>
 
           {/* Social proof */}
