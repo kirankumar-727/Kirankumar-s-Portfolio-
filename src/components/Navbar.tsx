@@ -64,7 +64,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a href="#contact" className="btn-primary">
-            Let's Talk
+            Let&apos;s Talk
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -116,7 +116,7 @@ export function Navbar() {
                   onClick={closeMobileMenu}
                   className="btn-primary w-full"
                 >
-                  Let's Talk
+                  Let&apos;s Talk
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </li>
